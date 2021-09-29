@@ -18,8 +18,8 @@ static int promisc = 0;        // promiscuous mode on/off
 static int packet_count = -1;  // number of packets that will be processed (-1 and 0 are both equal to infinity)
 
 int target_ports[] = {22, 443, 80, 0};
-// char *filter = "(tcp[13] == 0x02) || (tcp[13] == 0x14) || (tcp[13] == 0x12) || (tcp[13] == 0x04)";
-char *filter = "(host 192.168.1.80 or host 192.168.1.85) and (tcp[13] == 0x02) or (tcp[13] == 0x14) or (tcp[13] == 0x12) or (tcp[13] == 0x04)";
+char *filter = "(tcp[13] == 0x02) || (tcp[13] == 0x14) || (tcp[13] == 0x12) || (tcp[13] == 0x04)";
+// char *filter = "(host 192.168.1.80 or host 192.168.1.85) and (tcp[13] == 0x02) or (tcp[13] == 0x14) or (tcp[13] == 0x12) or (tcp[13] == 0x04)";
 
 int status = 0;
 
